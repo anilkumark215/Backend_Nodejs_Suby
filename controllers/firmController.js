@@ -1,3 +1,4 @@
+const path = require('path'); // ✅ ADD THIS LINE
 const Firm   = require('../model/Firm');
 const Vendor = require('../model/Vendor');
 const multer = require('multer');
