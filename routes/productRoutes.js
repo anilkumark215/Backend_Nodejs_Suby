@@ -10,7 +10,11 @@ router.get('/:firmId/products',productController.getProductByFirm);
 router.get('/uploads/:imageName', (req, res) => {
     const imageName = req.params.imageName;
     res.headersSent('Contenr-Type', 'image/jpeg');
-    res.sendFile(path.join(__dirname,'..',uploads,imageName));
+   // res.setHeader('Content-Type', 'image/jpeg');
+
+   res.sendFile(path.join(__dirname,'..',uploads,imageName));
+  // res.sendFile(path.join(__dirname, '..', 'uploads', imageName));
+
 });
 
 
